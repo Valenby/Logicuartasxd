@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+}
+
+.ul>li{
+    list-style: none;
+}
+
+.ul>li>a{
+    text-decoration: none;
+}
+
+body{
+    /* font-family: 'Roboto Condensed', sans-serif; */
+    font-family: 'Kanit', sans-serif;
+}
+
+/* modo movil */
+/* estado inicial de los elementos cuando esten en menos pixeceles */
+@media screen and  (max-width:1000px){
+     .logo{
+        display: none;
+    }
+    .icon{
+        display: none;
+    }
+    .navContainer{
+        background-color: white;
+        width: 100%;
+        
+    }
+    .ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;  
+        align-items: center;
+        position: absolute; /* no espacio en pantalla*/
+        top: -100%;         /*run oculto*/
+        transition: top 1s; /* cualquier mof demorara un segn*/
+        width: 100%;        /*para ocupar toda la pantalla*/
+        height: 30%;
+        z-index: 1;
+        background-color: #E6E6E6;
+
+    }
+    .ul>li{
+        padding: 10px 0;
+    }
+
+    .btnToggle{
+        z-index: 2;
+        position: relative;
+        background-color: #C1D82F;
+        color: #000000;
+        border: none;
+        align-items: center;
+    }
+    .fs-1{
+        font-size: 30px;
+    }
+    .nav{
+        background-color: #C1D82F;
+
+    }
+
+    .ul>li>a{
+        color:#000000;
+    }
+
+    .ul>li>a:hover{
+        color:blue;
+    }
+}
+
+/* modo web */
+@media screen and  (min-width:1001px) {
+
+    .btnToggle{
+        display: none;
+    }
+    .ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+    .ul>li>a{
+        color:black;
+    }
+
+    .ul>li>a:hover{
+        color:blue;
+    }
+    .ul>li{
+        padding: 0 22px; /*separamos elementos juntos*/
+        font-size: 19px;
+    }
+    .nav{
+        padding: 30px;
+        box-shadow: 0 4px 8px #C1D82F;
+    }
+    .navContainer{
+        background-color:#E6E6E6 ;
+    }
+}
+
